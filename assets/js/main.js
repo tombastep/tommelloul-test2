@@ -405,6 +405,7 @@
 			
 			if (hashParts[0] == '#projects' && hashParts.length > 1) {
 				window.setTimeout(function () {
+					alert(hashParts[1]);
 					showProject(hashParts[1]);
 				}, 300);
 			}
