@@ -1,6 +1,6 @@
 var pathname = window.location.pathname;
 var hostname = window.location.hostname;
-var repo = pathname.split("/")[1];
+var repo = pathname.replace(/\//g, '');
 var user = hostname.split(".")[0];
 var domain = hostname.split(".")[1];
 
