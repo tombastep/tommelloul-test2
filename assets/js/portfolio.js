@@ -66,7 +66,7 @@ function firstAjax() {
 
 function firstGit() {
 	(async () => {
-		const response = await fetch('https://api.github.com/repos/' + user + '/' + repo + '/contents/images/portfolio/');
+		const response = await fetch('https://api.github.com/repos/' + user + '/' + repo + '/contents/images/portfolio');
 		const data = await response.json();
 		for (let file of data) {
 			var val = file.name;
@@ -94,10 +94,8 @@ function firstGit() {
 }
 
 function startGit(id) {
-	var project = $("#projectGallery");
-	var folder = "../../projects/" + id + "/";
 	(async () => {
-		const response = await fetch('https://api.github.com/repos/' + user + '/' + repo + '/contents/projects/' + id + '/');
+		const response = await fetch('https://api.github.com/repos/' + user + '/' + repo + '/contents/projects/' + id);
 		const data = await response.json();
 		for (let file of data) {
 			var val = file.name;
