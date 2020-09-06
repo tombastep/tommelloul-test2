@@ -1,10 +1,11 @@
 <html>
   <body>
     <script>
-      var rep = window.location.pathname;
+      var pathname = window.location.pathname;
       var hostname = window.location.hostname;
+      var rep = pathnamesplit("/")[1];
       var user = hostname.split(".")[0];
-      alert("hostname: " + hostname + "/nrep: " + rep + "/nuser: " + user);
+      alert("hostname: " + hostname + "\nrep: " + rep + "\nuser: " + user);
       (async () => {
         const response = await fetch('https://api.github.com/repos/tombastep/tommelloul-test2/contents/');
         const data = await response.json();
