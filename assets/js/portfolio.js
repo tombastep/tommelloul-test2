@@ -131,7 +131,8 @@ function firstGit() {
 		const data = await response.json();
 		for (let file of data) {
 			var val = file.name;
-			var url = file.path;
+			var url = '../../' + file.path;
+			console.log(val);
 			if (val.match(/\.(jpe?g|png|gif|webp)$/)) {
 				var id = val.split('.').slice(0, -1).join('.');
 				var caption = id.replace('%20', "\n");
@@ -160,6 +161,7 @@ function firstAjax() {
 		url: folder,
 		success: function (data) {
 			$(data).find("a").attr("href", function (i, val) {
+				console.log(val);
 				if (val.match(/\.(jpe?g|png|gif|webp)$/)) {
 					var id = val.split('.').slice(0, -1).join('.');
 					var url = folder + val;
