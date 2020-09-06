@@ -4,7 +4,15 @@ var repo = pathname.replace(/\//g, '');
 var user = hostname.split(".")[0];
 var domain = hostname.split(".")[1];
 
+var pathname = window.location.pathname;
+var hostname = window.location.hostname;
+var repo = pathname.replace(/\//g, '');
+var user = hostname.split(".")[0];
+var domain = hostname.split(".")[1];
+
+
 var galleryContainer = $("#projectsContent > .gallery.container");
+var project = $("#projectGallery"); 
 var oldid, slider;
 
 
@@ -218,7 +226,7 @@ function startGit(id) {
 				});
 			}
 		}
-		await window.setTimeout(function () {
+		window.setTimeout(function () {
 			project.lightSlider({
 				gallery: true,
 				item: 1,
@@ -250,7 +258,6 @@ function startGit(id) {
 }
 
 function startAjax(id) {
-	var project = $("#projectGallery"); 
 	var folder = "../../projects/" + id + "/";
 	$.ajax({
 		url: folder,
