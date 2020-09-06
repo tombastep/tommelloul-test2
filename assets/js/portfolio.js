@@ -127,7 +127,7 @@ function showProject(id) {
 
 function firstGit() {
 	(async () => {
-		const response = await fetch('https://api.github.com/repos/' + user + '/' + repo + '/contents/');
+		const response = await fetch('https://api.github.com/repos/' + user + '/' + repo + '/contents/projects/');
 		const data = await response.json();
 		for (let file of data) {
 			var val = file.name;
