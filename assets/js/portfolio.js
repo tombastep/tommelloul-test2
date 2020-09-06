@@ -87,7 +87,7 @@ function firstGit() {
 						desc = lines[2];
 					}
 				});
-				$("#portfolioGallery").append('<a href="#projects/' + id.substring(id.indexOf('%20') + 3) + '"><div class="project" id="' + id + '" title="' + caption + '" data-descTitle="' + descTitle + '" data-desc="' + desc + '" style="background-image: url(&apos;' + url + '&apos;)"></div></a>');
+				$("#portfolioGallery").append('<a href="#projects/' + id.substring(id.indexOf('%20') + 4) + '"><div class="project" id="' + id + '" title="' + caption + '" data-descTitle="' + descTitle + '" data-desc="' + desc + '" style="background-image: url(&apos;' + url + '&apos;)"></div></a>');
 			}
 		}
 	})()
