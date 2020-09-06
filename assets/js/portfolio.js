@@ -131,7 +131,7 @@ function firstGit() {
 		const data = await response.json();
 		for (let file of data) {
 			var val = file.name;
-			var url = '/' + user + '/' + file.path;
+			var url = '/' + repo + '/' + file.path;
 			console.log(val);
 			if (val.match(/\.(jpe?g|png|gif|webp)$/)) {
 				var id = val.split('.').slice(0, -1).join('.');
